@@ -9,32 +9,88 @@ body {
     color: rgb(0,0,50);
 }
 
-.head {
-    display: inline-block;
-    border-width: 3px;
-    border-style: solid;
-    border-color: aqua;
-    margin: 0 20px 20px 0;
-    padding: 10px 20px 20px 20px;
-    padding-top: 20px;    
+.nav-bar {
+    font-size: 25px;
+    color: black;
+    display: inline;
+    padding-right: 50px;
+}
+
+.nav-bar li:hover {
+    font-size: 110%;    
+}
+
+.nav-bar li {
     text-align: center;
 }
 
-.rooms-list{
-    display: inline-block;
+a:visited {
+    color: black;
 }
 
-.rooms {
-    border-width: 2px;
-    border-style: solid;
-    border-color: aqua;
-    padding: 5px;
-    text-align: center;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: slategray;
     margin-bottom: 5px;
 }
 
-li:hover {
+.chat-title {
+    float: left;
+    display: block;
+    clear: right;
+    border-width: 3px;
+    border-style: solid;
+    border-color: aqua;
+    margin: 5px;
+    padding: 5px;  
+    text-align: center;
+    white-space: nowrap;
+    width: 25%;
+}
+.rooms-list{
+    float: left;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: aqua;
+    width: 25%;
+    clear: left;
+}
+
+.rooms {
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 20%;
+}
+
+.rooms li:hover {
     font-size: 110%;
     border-color: black;
     border-width: 5px;
 } 
+
+.messages {
+    float: right;
+    display: block;
+    width: 70%;
+    height: 90%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aqua;
+}
+
+.message-bar {
+    float: right;
+    display: block;
+    width: 70%;
+    height: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aqua;
+}

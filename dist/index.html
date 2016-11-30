@@ -8,40 +8,33 @@
     <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body ng-controller="ChatCtrl">
-    <h1 class="head">Bloc Chat</h1>
-    <div>
-        <!-- List of Chat rooms -->
-        <ul class="rooms-list">
-        <li class="rooms" ng-repeat"room in rooms">{{ room.text }}</li>
-        <li class="rooms">Room 2</li>
-        <li class="rooms">Room 3</li>
-        <li class="rooms">Room 4</li>
+<body>    
+    <nav> <!-- navigation bar --> 
+        <ul>
+            <li class="nav-bar"><a ui-sref='home'>Chat Rooms</a>
+            <li class="nav-bar"><a ui-sref='home'>About</a></li>
         </ul>
-    </div>
-    <div>
-        <!-- Chat room Messages -->
-    </div>
-    <div>
-        <!-- Chat room input -->
-    </div>
+    </nav>
     
     <ui-view></ui-view>
-    <script src="/scripts/app.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBW2E_OhwUgIm9B5Q43uBD-2SsUB4lf1kc",
-    authDomain: "bloc-chat-c6351.firebaseapp.com",
-    databaseURL: "https://bloc-chat-c6351.firebaseio.com",
-    storageBucket: "bloc-chat-c6351.appspot.com",
-    messagingSenderId: "639101147432"
-  };
-  firebase.initializeApp(config);
-</script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyBW2E_OhwUgIm9B5Q43uBD-2SsUB4lf1kc",
+        authDomain: "bloc-chat-c6351.firebaseapp.com",
+        databaseURL: "https://bloc-chat-c6351.firebaseio.com",
+        storageBucket: "bloc-chat-c6351.appspot.com",
+        messagingSenderId: "639101147432"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/room.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
 </body>
 </html>

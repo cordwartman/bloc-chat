@@ -1,1 +1,29 @@
-<h1>Home Page</h1>
+<main>
+    <h1 class="chat-title">Bloc Chat</h1>
+    
+    <div class="messages">
+        <!-- Chat room Messages -->
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+        <div> George: Hi!</div>
+        <div> Jon: Hi!</div>
+    </div>
+    <div class="rooms-list" ng-repeat="room in home.roomList track by $index">
+        <span class="rooms">{{ home.roomList[$index] }}</span>
+    </div>
+    <div class="message-bar">
+        <!-- Chat room input -->
+        <input type="text" name="message">
+        <input type="submit" value="Send">
+    </div>
+</main>    

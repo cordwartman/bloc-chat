@@ -1,29 +1,41 @@
 <main>
-    <h1 class="chat-title">Bloc Chat</h1>
-    
-    <div class="messages">
-        <!-- Chat room Messages -->
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
-        <div> George: Hi!</div>
-        <div> Jon: Hi!</div>
+    <div class="chat-rooms">
+        <div class="chat-title">
+            <h1>Bloc Chat</h1>
+            <button type="button" class="new-button" ng-click="home.showRoomModal()">New Room</button>
+        </div>
+        <div class="rooms-list" ng-repeat="room in home.roomList track by $index">
+            <span class="rooms">{{ home.roomList[$index] }}</span>
+        </div>
     </div>
-    <div class="rooms-list" ng-repeat="room in home.roomList track by $index">
-        <span class="rooms">{{ home.roomList[$index] }}</span>
-    </div>
-    <div class="message-bar">
-        <!-- Chat room input -->
-        <input type="text" name="message">
-        <input type="submit" value="Send">
+    <div class="chat-space">
+        <div class="messages">
+            <!-- Chat room Messages -->
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+            <div> George: Hi!</div>
+            <div> Jon: Hi!</div>
+        </div>
+        <table class="message-bar">
+            <!-- Chat room input -->
+            <tr>
+                <td class="message-input-cell">
+                    <input class="message-input" type="text" name="message">
+                </td>
+                <td class="send-button-cell">
+                    <input class="send-button" type="submit" value="Send">
+                </td>
+            </tr>
+        </table>
     </div>
 </main>    

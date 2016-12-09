@@ -5,7 +5,7 @@
             <button type="button" class="new-button" ng-click="home.showRoomModal()">New Room</button>
         </div>
         <div class="rooms-list" ng-repeat="room in home.roomList track by $index">
-            <span class="rooms">{{ home.roomList[$index] }}</span>
+            <span>{{ home.roomList[$index].$value }}</span>
         </div>
     </div>
     <div class="chat-space">

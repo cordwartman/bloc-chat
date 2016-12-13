@@ -10,7 +10,6 @@
             this.activeRoomName = this.activeRoom.$value;
             this.activeRoomId = roomId;
             this.activeRoomMessages = Message.getByRoomId(roomId);
-            console.log(this.activeRoomMessages[0]);
         };
         
         this.showRoomModal = function() {
@@ -23,6 +22,10 @@
             newRoomInstance.result.then(function(){
                 alert("New chat room created!");
             });
+        };
+        
+        this.send = function(newMessage) {
+            Message.send(newMessage);  
         };
     }
     

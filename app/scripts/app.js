@@ -1,24 +1,19 @@
 (function() {
-/*    function config($stateProvider, $locationProvider) {
+    function config($stateProvider, $locationProvider) {
         $locationProvider
             .html5Mode({
                 enabled: true,
                 requireBase: false
             });
         $stateProvider
-            .state('landing', {
+            .state('home', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
-                templateUrl: '/templates/landing.html'
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/home.html'
             });
     }
-        */
-    var app = angular.module('blocChat', ['ui.router', 'firebase']).config(config);
-    /*
-    app.controller("ChatCtrl", function($scope, $firebaseArray) {
-    var ref = firebase.database().ref().child("rooms");
-    
-    $scope.messages = $firebaseArray(ref);
-    });
-    */
+        
+    angular
+        .module('blocChat', ['ui.router', 'firebase'])
+        .config(config)
 })();

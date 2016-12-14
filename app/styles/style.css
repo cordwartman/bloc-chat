@@ -105,10 +105,19 @@ ul {
     color: red;
 } 
 
+.room-name{
+    background-color: aqua;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+}
+
 .messages {
     display: block;
-    height: 80%;
+    min-height: 310px;
+    overflow: scroll;
     background-color: rgb(241,241,212);
+    text-align: left;
 }
 
 .message-bar {

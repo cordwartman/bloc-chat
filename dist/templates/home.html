@@ -3,6 +3,7 @@
         <div class="chat-title">
             <h1>Bloc Chat</h1>
             <button type="button" class="new-button" ng-click="home.showRoomModal()">New Room</button>
+            <h5>Username: userName</h5>
         </div>
         <div class="rooms-list" ng-repeat="room in home.roomList track by $index" ng-click="home.changeRoom(home.roomList[$index].$id, $index)">
             <span>{{ home.roomList[$index].$value }}</span>

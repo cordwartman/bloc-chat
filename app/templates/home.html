@@ -3,7 +3,6 @@
         <div class="chat-title">
             <h1>Bloc Chat</h1>
             <button type="button" class="new-button" ng-click="home.showRoomModal()">New Room</button>
-            <h5>Username: userName</h5>
         </div>
         <div class="rooms-list" ng-repeat="room in home.roomList track by $index" ng-click="home.changeRoom(home.roomList[$index].$id, $index)">
             <span>{{ home.roomList[$index].$value }}</span>
@@ -21,10 +20,10 @@
             <!-- Chat room input -->
             <tr>
                 <td class="message-input-cell">
-                    <input class="message-input" type="text" name="message">
+                    <input class="message-input" type="text" ng-model="message" name="message">
                 </td>
                 <td class="send-button-cell">
-                    <input class="send-button" type="submit" value="Send">
+                    <button ng-click="home.send(message)" type="button" class="send-button">Send</button>
                 </td>
             </tr>
         </table>
